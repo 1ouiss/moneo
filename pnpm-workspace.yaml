@@ -1,0 +1,10 @@
+minimumReleaseAge: 10080
+trustPolicy: no-downgrade
+allowBuilds:
+  esbuild: true
+overrides:
+  # semver@6.3.2 publié le 2026-11-02 (< 7 jours) : on garde 6.3.1 tant qu'il n'est pas mature
+  semver@^6: 6.3.1
+trustPolicyExclude:
+  # 6.3.1 (2023-07-10, mainteneurs npm habituels) n'a pas de provenance, contrairement à 6.3.2 trop récent. 2026-11-09
+  - semver@6.3.1
